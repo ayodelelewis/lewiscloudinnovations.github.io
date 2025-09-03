@@ -1,128 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LewisCloud Innovations — Cloud, Security & AI</title>
-  <meta name="description" content="LewisCloud Innovations — modern cloud, security, and AI solutions for businesses. Launching soon."/>
-  <link rel="canonical" href="https://www.lewiscloudinnovations.com/" />
-  <meta name="theme-color" content="#0a0f24" />
-  <meta name="robots" content="index,follow" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="LewisCloud Innovations — Cloud, Security & AI" />
-  <meta property="og:description" content="Modern cloud, security, and AI solutions for ambitious teams." />
-  <meta property="og:url" content="https://www.lewiscloudinnovations.com/" />
-  <meta property="og:image" content="https://www.lewiscloudinnovations.com/assets/og.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/styles.css" />
-  <script defer src="/script.js"></script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "LewisCloud Innovations Limited",
-    "url": "https://www.lewiscloudinnovations.com",
-    "logo": "https://www.lewiscloudinnovations.com/assets/logo.svg",
-    "sameAs": []
-  }
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LewisCloud Innovations — Cloud & Cybersecurity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Secure, scalable cloud & cybersecurity services for SMEs, NGOs, education, healthcare, and finance."/>
 </head>
-<body>
-  <header class="site-header">
-    <div class="wrap header-grid">
-      <div class="brand">
-        <img src="/assets/logo.svg" alt="LewisCloud Innovations logo" height="28"/>
-        <span>LewisCloud <strong>Innovations</strong></span>
+<body class="bg-white text-gray-900">
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-2xl bg-black text-white flex items-center justify-center">☁️</div>
+        <div class="font-bold">LewisCloud Innovations</div>
       </div>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#services" class="hover:text-black">Services</a>
+        <a href="#packages" class="hover:text-black">Packages</a>
+        <a href="#industries" class="hover:text-black">Industries</a>
+        <a href="#training" class="hover:text-black">Training</a>
+        <a href="#about" class="hover:text-black">About</a>
+        <a href="#contact" class="hover:text-black">Contact</a>
       </nav>
+      <a href="#contact" class="hidden md:inline-flex bg-black text-white px-4 py-2 rounded-xl text-sm">Get a Quote</a>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <h1>Cloud-first. Security-led. AI-powered.</h1>
-        <p class="tagline">We help teams move faster with resilient cloud architectures, trusted security, and applied AI.</p>
-        <a class="cta" href="#contact">Partner with us</a>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="uppercase tracking-widest text-xs text-gray-500">Cloud • Cybersecurity • Growth</p>
+        <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">
+          Secure, Scalable Cloud for Africa’s <span class="bg-yellow-200 px-1">Growing Businesses</span>
+        </h1>
+        <p class="text-gray-600 mt-4 md:text-lg leading-relaxed">
+          We help SMEs, NGOs, schools, healthcare and finance teams migrate, secure, and grow on the cloud—without overspending.
+        </p>
+        <div class="mt-6 flex gap-3 flex-wrap">
+          <a href="#contact" class="bg-black text-white px-4 py-2 rounded-xl">Start a Free Assessment</a>
+          <a href="#packages" class="border px-4 py-2 rounded-xl">Download Service Catalog</a>
+        </div>
+        <div class="mt-6 grid grid-cols-3 gap-4">
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-extrabold">99.95%</div>
+            <div class="text-gray-600 mt-1 text-sm">Uptime targets</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-extrabold">&ge;30%</div>
+            <div class="text-gray-600 mt-1 text-sm">Avg. cost savings</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-extrabold">24/7</div>
+            <div class="text-gray-600 mt-1 text-sm">Security monitoring</div>
+          </div>
+        </div>
       </div>
-    </section>
+      <div>
+        <div class="rounded-2xl shadow-lg border">
+          <div class="p-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl border p-4">
+              <div class="font-semibold">Managed Cloud</div>
+              <p class="text-sm text-gray-600 mt-1">Deploy, scale, and maintain apps on AWS/GCP/Azure or our optimized VPS.</p>
+            </div>
+            <div class="rounded-2xl border p-4">
+              <div class="font-semibold">Cloud Security</div>
+              <p class="text-sm text-gray-600 mt-1">Zero‑trust design, WAF, MFA/SSO, SIEM, and encrypted backups by default.</p>
+            </div>
+            <div class="rounded-2xl border p-4">
+              <div class="font-semibold">Threat Monitoring</div>
+              <p class="text-sm text-gray-600 mt-1">24/7 log analytics and anomaly detection with automated response runbooks.</p>
+            </div>
+            <div class="rounded-2xl border p-4">
+              <div class="font-semibold">Training</div>
+              <p class="text-sm text-gray-600 mt-1">Cyber awareness bootcamps, admin training, and compliance clinics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="section">
-      <div class="wrap two">
-        <div>
-          <h2>About Us</h2>
-          <p>LewisCloud Innovations empowers organizations to modernize with cloud-native platforms, strong security practices, and practical AI. Our approach is simple: design for reliability, automate where it matters, and keep humans in the loop.</p>
-          <ul class="checks">
-            <li>Cloud migrations &amp; cost optimization</li>
-            <li>Security hardening &amp; compliance readiness</li>
-            <li>Data pipelines &amp; AI integrations</li>
+  <!-- UTIL -->
+  <section id="services" class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <p class="uppercase tracking-widest text-xs md:text-sm text-gray-500">What we do</p>
+        <h2 class="text-2xl md:text-4xl font-bold mt-1">Cloud computing + cybersecurity services</h2>
+        <p class="text-gray-600 mt-3 leading-relaxed">Start lean. Scale fast. Stay secure. Our bundles are designed for small teams up to large orgs.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Cloud Migration & DevOps</h4>
+          <p class="text-gray-600 mt-1 text-sm">Lift‑and‑shift and modernization, CI/CD pipelines, IaC (Terraform), autoscaling, cost optimization.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Security‑as‑a‑Service</h4>
+          <p class="text-gray-600 mt-1 text-sm">Zero‑trust access, WAF, endpoint protection, patching, SIEM, SOC light with 24/7 alerting.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Pen‑Testing & Audit</h4>
+          <p class="text-gray-600 mt-1 text-sm">External & internal tests, web/API testing, hardened configs, policy frameworks and playbooks.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Backups & DR</h4>
+          <p class="text-gray-600 mt-1 text-sm">Encrypted multi‑region backups, RPO/RTO planning, disaster recovery runbooks and drills.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">AI‑assisted Security</h4>
+          <p class="text-gray-600 mt-1 text-sm">Anomaly detection on auth, payments, and network logs; automated triage and ticketing.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Training & Awareness</h4>
+          <p class="text-gray-600 mt-1 text-sm">Staff phishing simulations, admin upskilling, compliance clinics (NDPR, GDPR, HIPAA).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <p class="uppercase tracking-widest text-xs md:text-sm text-gray-500">Pricing</p>
+        <h2 class="text-2xl md:text-4xl font-bold mt-1">Simple packages that grow with you</h2>
+        <p class="text-gray-600 mt-3 leading-relaxed">Transparent tiers; custom quotes for enterprises and regulated sectors.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl border-gray-200 shadow-sm border p-6">
+          <div class="flex items-baseline justify-between">
+            <h4 class="text-xl font-bold">Starter</h4>
+            <div class="text-3xl font-extrabold">$199<span class="text-base font-medium text-gray-500">/mo</span></div>
+          </div>
+          <p class="text-gray-600 mt-2 text-sm">For small teams and startups getting cloud‑ready.</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li>✓ Cloud assessment & onboarding</li>
+            <li>✓ Basic WAF + MFA setup</li>
+            <li>✓ Nightly encrypted backups</li>
+            <li>✓ Monthly security report</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-black text-white px-4 py-2 rounded-xl mt-5">Get Starter</a>
+        </div>
+        <div class="rounded-2xl border-gray-200 shadow-sm border p-6">
+          <div class="flex items-baseline justify-between">
+            <h4 class="text-xl font-bold">Growth</h4>
+            <div class="text-3xl font-extrabold">$499<span class="text-base font-medium text-gray-500">/mo</span></div>
+          </div>
+          <p class="text-gray-600 mt-2 text-sm">For SMEs needing performance, uptime, and compliance.</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li>✓ Managed hosting & CI/CD</li>
+            <li>✓ 24/7 monitoring & alerting</li>
+            <li>✓ Pen‑test (quarterly)</li>
+            <li>✓ Compliance pack (NDPR/GDPR)</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-black text-white px-4 py-2 rounded-xl mt-5">Choose Growth</a>
+        </div>
+        <div class="rounded-2xl border-gray-200 shadow-sm border p-6">
+          <div class="flex items-baseline justify-between">
+            <h4 class="text-xl font-bold">Shield Enterprise</h4>
+            <div class="text-3xl font-extrabold">Custom</div>
+          </div>
+          <p class="text-gray-600 mt-2 text-sm">For finance, healthcare, public sector, and regional scale.</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li>✓ Zero‑trust architecture</li>
+            <li>✓ SOC light + SIEM integration</li>
+            <li>✓ DR drills & multi‑region HA</li>
+            <li>✓ Dedicated TAM & SLAs</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-black text-white px-4 py-2 rounded-xl mt-5">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries" class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="text-2xl md:text-4xl font-bold mt-1">Where we make the biggest impact</h2>
+        <p class="text-gray-600 mt-3 leading-relaxed">We focus on data‑sensitive teams that must be always‑on and audit‑ready.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-5">
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Financial Services</h4>
+          <p class="text-gray-600 mt-1 text-sm">PCI‑aware cloud setups, secure payments, fraud analytics, and audit trails.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Healthcare</h4>
+          <p class="text-gray-600 mt-1 text-sm">Encrypted PHI, fine‑grained access, data retention, and DR for clinics & labs.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Education</h4>
+          <p class="text-gray-600 mt-1 text-sm">Secure LMS, student privacy, affordable hosting for schools and EdTech.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">SMEs & NGOs</h4>
+          <p class="text-gray-600 mt-1 text-sm">From websites and CRMs to secure file‑sharing and donor data protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="text-2xl md:text-4xl font-bold mt-1">Why LewisCloud</h2>
+        <p class="text-gray-600 mt-3 leading-relaxed">Secure by default, cost‑optimized by design, and human support when you need it.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl border p-6">
+          <h4 class="font-semibold text-lg">Mission</h4>
+          <p class="text-gray-600 mt-2 text-sm">Empower businesses and communities with secure, scalable, and affordable cloud solutions—protecting data while fueling growth.</p>
+        </div>
+        <div class="rounded-2xl border p-6">
+          <h4 class="font-semibold text-lg">Vision</h4>
+          <p class="text-gray-600 mt-2 text-sm">Become Africa’s most trusted cloud‑cyber partner, delivering defense‑grade security to everyday organizations.</p>
+        </div>
+        <div class="rounded-2xl border p-6">
+          <h4 class="font-semibold text-lg">Principles</h4>
+          <ul class="mt-2 space-y-2 text-sm text-gray-700">
+            <li>✓ Security by default</li>
+            <li>✓ Cost transparency</li>
+            <li>✓ Open standards & portability</li>
+            <li>✓ People‑first support</li>
           </ul>
         </div>
-        <div class="card glass">
-          <h3>Mission</h3>
-          <p>Enable businesses to unlock the full power of cloud computing safely and efficiently.</p>
-          <h3>Vision</h3>
-          <p>Build a future where secure, scalable cloud and AI tooling is accessible to every team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section id="training" class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <p class="uppercase tracking-widest text-xs md:text-sm text-gray-500">Upskill fast</p>
+        <h2 class="text-2xl md:text-4xl font-bold mt-1">Training & workshops</h2>
+        <p class="text-gray-600 mt-3 leading-relaxed">From staff awareness to admin‑level cloud security clinics.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Cyber Awareness 101</h4>
+          <p class="text-gray-600 mt-1 text-sm">Phishing, passwords, device hygiene, safe browsing; includes quizzes and certificates.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">Admin Hardening</h4>
+          <p class="text-gray-600 mt-1 text-sm">SSO/MFA, role design, logging, SIEM basics, incident runbooks for IT teams.</p>
+        </div>
+        <div class="rounded-2xl shadow-sm border p-6">
+          <h4 class="font-semibold text-lg">AI for Security</h4>
+          <p class="text-gray-600 mt-1 text-sm">Using logs and ML to detect anomalies; hands‑on with safe, ethical practices.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="services" class="section alt">
-      <div class="wrap grid3">
-        <div class="card">
-          <h3>Cloud Foundations</h3>
-          <p>Design &amp; landing zones, IaC, CI/CD, and observability that scale with your growth.</p>
+  <!-- ABOUT -->
+  <section id="about" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="text-2xl md:text-4xl font-bold mt-1">About LewisCloud Innovations Limited</h2>
+        <p class="text-gray-600 mt-3 leading-relaxed">Founded by Lewis to make modern cloud security accessible to every organization, big or small.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-6">
+          <h4 class="font-semibold text-lg">What we believe</h4>
+          <p class="text-gray-600 mt-2 text-sm leading-relaxed">Cloud should be simple, secure, and affordable. We combine best‑practice architectures with real‑world pragmatism so teams can move faster without sacrificing safety or compliance.</p>
         </div>
-        <div class="card">
-          <h3>Security &amp; Compliance</h3>
-          <p>Zero-trust, hardening, secrets, identity, and readiness for audits.</p>
-        </div>
-        <div class="card">
-          <h3>AI Enablement</h3>
-          <p>Data readiness, model integration, guardrails, and measurable outcomes.</p>
+        <div class="rounded-2xl border p-6">
+          <h4 class="font-semibold text-lg">How we work</h4>
+          <ul class="mt-2 space-y-2 text-sm text-gray-700">
+            <li>✓ Assess → Plan → Migrate → Secure → Support</li>
+            <li>✓ Clear pricing and monthly reporting</li>
+            <li>✓ Vendor‑neutral, multi‑cloud friendly</li>
+            <li>✓ Local presence, regional reach</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="section">
-      <div class="wrap two">
-        <div>
-          <h2>Contact</h2>
-          <p>Questions or partnerships? We’d love to hear from you.</p>
-          <p><a class="email" href="mailto:info@lewiscloudinnovations.com">info@lewiscloudinnovations.com</a></p>
+  <!-- CTA -->
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl bg-black text-white p-6 md:p-10 text-center">
+        <h3 class="text-2xl md:text-3xl font-bold">Ready to secure and scale on the cloud?</h3>
+        <p class="text-white/80 mt-2">Book a free discovery call. We’ll map your quick wins and a 90‑day action plan.</p>
+        <div class="mt-4">
+          <a href="#contact" class="inline-flex gap-2 bg-white text-black px-4 py-2 rounded-xl">Book a Call →</a>
         </div>
-        <form class="card" onsubmit="return false">
-          <label>
-            <span>Name</span>
-            <input type="text" placeholder="Your name" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" placeholder="you@company.com" required>
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea rows="4" placeholder="Tell us about your project…"></textarea>
-          </label>
-          <button class="cta" type="submit" onclick="alert('Thanks! Please email us at info@lewiscloudinnovations.com while we finish the full site.');">Send</button>
-        </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© 2025 LewisCloud Innovations Limited. All rights reserved.</p>
-      <p class="muted">This site is launching soon — hosted on GitHub Pages.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="text-2xl md:text-4xl font-bold mt-1">Contact us</h2>
+        <p class="text-gray-600 mt-3 leading-relaxed">Tell us a little about your goals—migration, cost savings, or security upgrade—and we’ll respond within 24 hours.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-6">
+          <form class="grid gap-4">
+            <input class="border rounded-xl p-3" placeholder="Name" />
+            <input class="border rounded-xl p-3" placeholder="Work email" />
+            <input class="border rounded-xl p-3" placeholder="Company" />
+            <select class="border rounded-xl p-3">
+              <option>Service of interest</option>
+              <option>Cloud migration</option>
+              <option>Managed security</option>
+              <option>Pen‑testing</option>
+              <option>Backups & DR</option>
+              <option>Training</option>
+            </select>
+            <textarea class="border rounded-xl p-3 min-h-[120px]" placeholder="What do you want to achieve in the next 90 days?"></textarea>
+            <button type="button" class="bg-black text-white px-4 py-2 rounded-xl">Send enquiry →</button>
+          </form>
+        </div>
+        <div class="rounded-2xl border p-6 text-sm space-y-3">
+          <div class="flex items-center gap-3">📍 Africa‑first, serving clients globally</div>
+          <div class="flex items-center gap-3">📞 +234 (0) 000‑000‑0000</div>
+          <div class="flex items-center gap-3">✉️ hello@lewiscloudinnovations.com</div>
+          <p class="text-xs text-gray-500 mt-6">By submitting this form you agree to our privacy policy and consent to be contacted about our services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-black text-white flex items-center justify-center">☁️</div>
+        <div class="font-semibold">LewisCloud Innovations</div>
+      </div>
+      <div class="text-xs text-gray-500">© <span id="year"></span> LewisCloud Innovations Limited. All rights reserved.</div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
