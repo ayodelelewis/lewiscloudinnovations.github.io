@@ -1,1 +1,207 @@
-<!doctype html><title>LewisCloud</title><meta charset='utf-8'>Missing main file placeholder.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LewisCloud Innovations — Cloud‑first. Security‑led. AI‑powered.</title>
+  <meta name="description" content="We help teams move faster with resilient cloud architectures, trusted security, and applied AI.">
+  <link rel="icon" type="image/png" href="/LewisCloud-favicon.png">
+  <meta property="og:title" content="LewisCloud Innovations — Cloud‑first. Security‑led. AI‑powered.">
+  <meta property="og:description" content="Secure cloud, compliance, IoT & applied AI — Launching Soon.">
+  <meta property="og:image" content="/LewisCloud-og.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    /* premium blue nebula + mesh */
+    .sky:before,.sky:after{
+      content:"";position:absolute;inset:-15%;pointer-events:none;filter:blur(90px);
+      background:
+       radial-gradient(35rem 25rem at 20% 10%, rgba(59,130,246,.45), transparent 60%),
+       radial-gradient(32rem 24rem at 80% 25%, rgba(14,165,233,.45), transparent 60%),
+       radial-gradient(38rem 28rem at 50% 85%, rgba(37,99,235,.55), transparent 60%);
+      animation: float 18s ease-in-out infinite alternate;
+    }
+    .sky:after{filter:blur(110px);opacity:.35;animation-delay:1.2s}
+    .dots{
+      background-image: radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px);
+      background-size: 22px 22px;
+      mask-image: linear-gradient(to bottom, transparent 0, black 26%, black 80%, transparent 100%);
+    }
+    @keyframes float{from{transform:translateY(-8px)}to{transform:translateY(16px)}}
+  </style>
+</head>
+<body class="bg-slate-950 text-white selection:bg-blue-300/40">
+
+  <!-- Launching Soon ribbon -->
+  <div class="w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-center text-xs sm:text-sm py-2">
+    🚀 Launching Soon — join the waitlist for early access and pilot offers.
+  </div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-slate-900/60 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="/LewisCloud-logo.svg" class="h-8 w-auto" alt="LewisCloud logo">
+        <span class="font-extrabold tracking-tight">LewisCloud Innovations</span>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm text-slate-200">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#updates" class="hover:text-white">Updates</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <a href="#waitlist" class="hidden md:inline-flex bg-white text-slate-900 hover:bg-slate-100 px-4 py-2 rounded-xl text-sm">Join Waitlist</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 sky"></div>
+    <div class="absolute inset-0 dots"></div>
+    <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Cloud‑first. <span class="text-blue-300">Security‑led</span>. <span class="text-blue-200">AI‑powered.</span>
+        </h1>
+        <p class="text-slate-200 mt-4 md:text-lg">We help teams move faster with resilient cloud architectures, trusted security, and applied AI.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#services" class="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-xl">Explore services</a>
+          <a href="#contact" class="border border-white/30 hover:bg-white/10 px-4 py-2 rounded-xl">Get a quote</a>
+        </div>
+      </div>
+
+      <!-- About & Mission/Vision cards -->
+      <div id="about" class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-5 md:col-span-1">
+          <h3 class="font-semibold">About Us</h3>
+          <p class="text-slate-300 text-sm mt-2">Student‑founded, remote‑first, vendor‑neutral. We deliver secure cloud, compliance, and automation for startups, SMEs, NGOs, and public sector—globally.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-5">
+          <h3 class="font-semibold">Mission</h3>
+          <p class="text-slate-300 text-sm mt-2">Enable teams to unlock the full value of cloud, security, and AI with clarity, speed, and confidence.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-5">
+          <h3 class="font-semibold">Vision</h3>
+          <p class="text-slate-300 text-sm mt-2">A world where secure, reliable cloud and AI tooling is accessible to every team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDATIONS -->
+  <section id="services" class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6">
+          <h4 class="font-semibold text-lg">Cloud Foundations</h4>
+          <p class="text-slate-300 text-sm mt-2">Landing zones for AWS/Azure/GCP, CI/CD, IaC (Terraform), autoscaling, observability, FinOps.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6">
+          <h4 class="font-semibold text-lg">Security & Compliance</h4>
+          <p class="text-slate-300 text-sm mt-2">Zero‑trust access, SSO/MFA, WAF/EDR, hardening, SIEM, policy & playbooks (ISO27001, SOC2, GDPR).</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6">
+          <h4 class="font-semibold text-lg">AI Enablement</h4>
+          <p class="text-slate-300 text-sm mt-2">Data readiness, model integration, secure prompts, MLOps, and AI‑assisted runbooks.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-5">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6">
+          <h4 class="font-semibold text-lg">IoT & Automation</h4>
+          <p class="text-slate-300 text-sm mt-2">Device PKI, MQTT/HTTPS, OTA, telemetry, rule engines for buildings, plants, and fleets.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6">
+          <h4 class="font-semibold text-lg">Backups & DR</h4>
+          <p class="text-slate-300 text-sm mt-2">Encrypted multi‑region backups, RPO/RTO planning, DR runbooks and drills.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6">
+          <h4 class="font-semibold text-lg">Pen‑Testing & Audit</h4>
+          <p class="text-slate-300 text-sm mt-2">External & internal tests, web/API, misconfig checks, reports for auditors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Updates / Newsletter -->
+  <section id="updates" class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur p-6">
+        <div class="grid md:grid-cols-3 gap-6">
+          <article>
+            <div class="text-xs uppercase tracking-widest text-blue-300">Sep 2025</div>
+            <h3 class="font-semibold mt-1">Zero‑Trust in 7 Days</h3>
+            <p class="text-slate-300 text-sm mt-2">A starter playbook for SSO/MFA, role design and logging you can roll out this week.</p>
+          </article>
+          <article>
+            <div class="text-xs uppercase tracking-widest text-blue-300">Aug 2025</div>
+            <h3 class="font-semibold mt-1">Cut Cloud Bills by 30%</h3>
+            <p class="text-slate-300 text-sm mt-2">Autoscaling, rightsizing and storage tiers that actually save money.</p>
+          </article>
+          <article>
+            <div class="text-xs uppercase tracking-widest text-blue-300">Jul 2025</div>
+            <h3 class="font-semibold mt-1">IoT Security Essentials</h3>
+            <p class="text-slate-300 text-sm mt-2">Device identity with PKI, safe OTA, segmentation & SIEM integration.</p>
+          </article>
+        </div>
+
+        <!-- Newsletter subscribe -->
+        <div class="mt-6">
+          <form id="waitlist" action="https://formsubmit.co/hello@lewiscloudinnovations.com" method="POST" class="grid md:grid-cols-3 gap-3">
+            <input type="hidden" name="_subject" value="Newsletter Signup — LewisCloud">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+            <input required class="border border-white/20 bg-slate-950/40 text-white rounded-xl p-3 md:col-span-1" name="name" placeholder="Your name">
+            <input required type="email" class="border border-white/20 bg-slate-950/40 text-white rounded-xl p-3 md:col-span-1" name="email" placeholder="Your email">
+            <button class="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-xl md:col-span-1">Subscribe →</button>
+          </form>
+          <p class="text-xs text-slate-400 mt-2">No spam — unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6">
+        <h3 class="text-lg font-semibold">Let’s build responsibly</h3>
+        <p class="text-slate-300 text-sm mt-2">Tell us your goals—migration, cost savings, compliance, or AI rollout. We’ll propose a pragmatic 90‑day plan.</p>
+        <form action="https://formsubmit.co/hello@lewiscloudinnovations.com" method="POST" class="grid gap-3 mt-4">
+          <input type="hidden" name="_subject" value="New Contact — LewisCloud">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+          <input class="border border-white/20 bg-slate-950/40 text-white rounded-xl p-3" name="name" placeholder="Name" required>
+          <input class="border border-white/20 bg-slate-950/40 text-white rounded-xl p-3" type="email" name="email" placeholder="Work email" required>
+          <textarea class="border border-white/20 bg-slate-950/40 text-white rounded-xl p-3 min-h-[120px]" name="message" placeholder="What would you like to achieve in 90 days?"></textarea>
+          <button class="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-xl">Send →</button>
+        </form>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur p-6 text-sm space-y-3">
+        <div class="flex items-center gap-3">📍 Global, remote‑first</div>
+        <div class="flex items-center gap-3">✉️ hello@lewiscloudinnovations.com</div>
+        <div class="flex items-center gap-3">📞 +234 (0) 000‑000‑0000</div>
+        <div class="pt-2 text-xs text-slate-400"><a class="underline" href="/LewisCloud-privacy.html">Privacy</a> · <a class="underline" href="/LewisCloud-terms.html">Terms</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="/LewisCloud-logo.svg" class="h-8 w-auto" alt="logo"/>
+        <span class="font-semibold">LewisCloud Innovations</span>
+      </div>
+      <div class="text-xs text-slate-400">© <span id="year"></span> LewisCloud Innovations Limited. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Optional simple countdown: set your target ISO date/time below -->
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const targetISO = "2025-12-01T00:00:00Z"; // <-- change launch date/time here
+    const el=(id)=>document.getElementById(id);
+    // If you want visible counters, add elements with ids d/h/m/s
+  </script>
+</body>
+</html>
