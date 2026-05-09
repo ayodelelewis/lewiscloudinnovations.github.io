@@ -1,0 +1,124 @@
+---
+const email = "ayodelelewis@outlook.com";
+const phone = "+1 (682) 234-8482";
+const phoneHref = "tel:+16822348482";
+const subject = encodeURIComponent("Inquiry — Lewis Cloud Innovations");
+const body = encodeURIComponent(
+  "Hi Ayodele,\n\nI'd like to discuss an engagement.\n\nOrganization: \nIndustry: \nWhat we need help with: \nTimeline: \n\nThanks,\n",
+);
+const mailto = `mailto:${email}?subject=${subject}&body=${body}`;
+---
+
+<section id="contact" class="relative py-24 md:py-32 scroll-mt-20">
+  <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+  <div class="container-wide">
+    <div
+      class="reveal max-w-3xl mx-auto rounded-2xl border border-teal-500/20 bg-gradient-to-br from-navy-900/60 via-navy-800/40 to-navy-900/60 backdrop-blur-md p-8 md:p-12"
+    >
+      <span class="eyebrow mb-5 inline-flex">Start a Conversation</span>
+      <h2 class="heading-2 mb-5">
+        Tell us what you're trying to ship — securely.
+      </h2>
+      <p class="body-large mb-8 max-w-xl">
+        Engagements typically begin with a 30 to 60-minute discovery call.
+        We'll scope outcomes, constraints, and success criteria, and follow
+        with a tailored proposal within five business days.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-8">
+        <a
+          href={mailto}
+          class="card hover:border-teal-500/40 group block no-underline"
+        >
+          <div class="card-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </div>
+          <p
+            class="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500 mb-2"
+          >
+            Email
+          </p>
+          <p
+            class="text-base text-white font-medium break-all group-hover:text-teal-300 transition-colors"
+          >
+            {email}
+          </p>
+        </a>
+
+        <a
+          href={phoneHref}
+          class="card hover:border-teal-500/40 group block no-underline"
+        >
+          <div class="card-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+          </div>
+          <p
+            class="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500 mb-2"
+          >
+            Phone
+          </p>
+          <p
+            class="text-base text-white font-medium group-hover:text-teal-300 transition-colors"
+          >
+            {phone}
+          </p>
+        </a>
+      </div>
+
+      <a href={mailto} class="btn-primary">
+        Send an Email
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </a>
+
+      <p
+        class="mt-8 pt-8 border-t border-white/5 text-xs text-slate-500 leading-relaxed"
+      >
+        Confidential inquiries welcome. All client conversations covered under a
+        Mutual NDA on request before sharing sensitive details. Primary AWS
+        delivery region: af-south-1 (Cape Town); multi-region delivery
+        available.
+      </p>
+    </div>
+  </div>
+</section>

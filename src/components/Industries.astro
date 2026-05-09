@@ -1,0 +1,73 @@
+---
+const industries = [
+  {
+    name: "Fintech",
+    description:
+      "PCI-DSS-aligned payment platforms, low-latency settlement, and zero-trust trading infrastructure.",
+  },
+  {
+    name: "Healthcare",
+    description:
+      "HIPAA / HITRUST-ready clinical platforms, patient data sovereignty, and audit-grade access controls.",
+  },
+  {
+    name: "Government & Public Sector",
+    description:
+      "FedRAMP / NIST-aligned sovereign cloud, segmentation, and continuous monitoring.",
+  },
+  {
+    name: "Oil & Gas",
+    description:
+      "OT-to-cloud telemetry, IEC 62443-aware segmentation, and high-availability industrial workloads.",
+  },
+  {
+    name: "Telecommunications",
+    description:
+      "Multi-tenant carrier-grade platforms, regulator-aware operations, and edge resilience.",
+  },
+  {
+    name: "E-commerce & Retail",
+    description:
+      "PCI-DSS-aware, DDoS-resilient commerce stacks engineered for spike traffic and global delivery.",
+  },
+  {
+    name: "Enterprise IT",
+    description:
+      "Migration to AWS, modernization of legacy estates, and platform engineering at scale.",
+  },
+  {
+    name: "High-Growth Startups",
+    description:
+      "Production-grade AWS foundations, SOC 2 readiness paths, and DevSecOps-from-day-one.",
+  },
+];
+---
+
+<section id="industries" class="relative py-24 md:py-32 scroll-mt-20">
+  <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+  <div class="container-wide">
+    <div class="reveal max-w-2xl mb-16">
+      <span class="eyebrow mb-5 block">Industries We Serve</span>
+      <h2 class="heading-2 mb-5">
+        Built for organizations that cannot afford to fail.
+      </h2>
+      <p class="body-large">
+        We specialize in regulated and high-stakes verticals where security
+        posture, compliance evidence, and engineering rigor are
+        non-negotiable.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {
+        industries.map((ind, i) => (
+          <div class="card reveal" style={`animation-delay: ${i * 0.04}s;`}>
+            <h3 class="heading-3 mb-2.5 text-base">{ind.name}</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">{ind.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

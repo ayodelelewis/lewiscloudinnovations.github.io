@@ -1,0 +1,34 @@
+---
+const frameworks = [
+  "HIPAA",
+  "PCI-DSS v4.0",
+  "SOC 2 Type II",
+  "ISO 27001:2022",
+  "NIST 800-53",
+  "NIST SP 800-207",
+  "FedRAMP",
+  "POPIA",
+  "NDPR",
+  "GDPR",
+  "HITRUST",
+  "IEC 62443",
+];
+---
+
+<section class="relative py-20 md:py-24">
+  <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+  <div class="container-wide">
+    <div class="reveal text-center mb-12">
+      <span class="eyebrow mb-5 inline-flex">Compliance Fluency</span>
+      <h2 class="heading-2 max-w-3xl mx-auto">
+        Aligned to the frameworks your auditors, regulators, and CISO already
+        care about.
+      </h2>
+    </div>
+
+    <div class="reveal flex flex-wrap justify-center gap-2.5 max-w-4xl mx-auto">
+      {frameworks.map((fw) => <span class="compliance-badge">{fw}</span>)}
+    </div>
+  </div>
+</section>

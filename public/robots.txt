@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block AI scrapers that don't respect robots.txt is futile,
+# but published intent matters for legal posture
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://lewiscloudinnovations.com/sitemap-index.xml

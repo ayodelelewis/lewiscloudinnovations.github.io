@@ -1,0 +1,392 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------- */
+/* Lewis Cloud Innovations — Design Tokens                       */
+/* ------------------------------------------------------------- */
+
+@theme {
+  /* Brand palette — navy/teal, dark-first */
+  --color-navy-50: #f0f4fa;
+  --color-navy-100: #d6e0ee;
+  --color-navy-200: #a8b9d4;
+  --color-navy-300: #7a93b9;
+  --color-navy-400: #4d6d9f;
+  --color-navy-500: #1f4785;
+  --color-navy-600: #163565;
+  --color-navy-700: #0e2348;
+  --color-navy-800: #0a2540;   /* Primary navy */
+  --color-navy-900: #061528;
+  --color-navy-950: #030b18;
+
+  --color-teal-50: #e0f4f4;
+  --color-teal-100: #b8e5e5;
+  --color-teal-200: #8fd6d6;
+  --color-teal-300: #66c7c7;
+  --color-teal-400: #3db8b8;
+  --color-teal-500: #00a6a6;   /* Primary teal */
+  --color-teal-600: #008686;
+  --color-teal-700: #006666;
+  --color-teal-800: #004646;
+  --color-teal-900: #002626;
+
+  --color-slate-text: #b8c5d6;
+  --color-slate-muted: #8fa3bd;
+
+  /* Typography */
+  --font-display: "Geist", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Animation */
+  --animate-fade-up: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fadeIn 1.2s ease-out forwards;
+  --animate-glow: glow 4s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* ------------------------------------------------------------- */
+/* Self-hosted Geist fonts (no Google tracking)                  */
+/* ------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Geist";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Geist-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Geist-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Geist-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Geist-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/GeistMono-Regular.woff2") format("woff2");
+}
+
+/* ------------------------------------------------------------- */
+/* Base styles                                                    */
+/* ------------------------------------------------------------- */
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-display);
+  background: var(--color-navy-950);
+  color: var(--color-slate-text);
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 166, 166, 0.08), transparent 50%),
+    radial-gradient(ellipse 60% 80% at 100% 50%, rgba(31, 71, 133, 0.06), transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Subtle grid texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(184, 197, 214, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 197, 214, 0.015) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black, transparent 80%);
+}
+
+main { position: relative; z-index: 1; }
+
+::selection {
+  background: var(--color-teal-500);
+  color: var(--color-navy-950);
+}
+
+/* Focus rings */
+:focus-visible {
+  outline: 2px solid var(--color-teal-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------- */
+/* Reusable component classes                                     */
+/* ------------------------------------------------------------- */
+
+.container-wide {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-wide { padding-inline: 2rem; }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-teal-400);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--color-teal-500);
+}
+
+.heading-1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: white;
+  text-wrap: balance;
+}
+
+.heading-2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: white;
+  text-wrap: balance;
+}
+
+.heading-3 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+  color: white;
+}
+
+.body-large {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--color-slate-text);
+  text-wrap: pretty;
+}
+
+.body-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-slate-text);
+  text-wrap: pretty;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--color-teal-500);
+  color: var(--color-navy-950);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid var(--color-teal-500);
+}
+
+.btn-primary:hover {
+  background: var(--color-teal-400);
+  border-color: var(--color-teal-400);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 166, 166, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.5rem;
+  background: transparent;
+  color: var(--color-slate-text);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(184, 197, 214, 0.2);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-teal-500);
+  color: white;
+  background: rgba(0, 166, 166, 0.05);
+}
+
+.card {
+  position: relative;
+  padding: 1.75rem;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 35, 72, 0.4) 0%,
+    rgba(10, 37, 64, 0.2) 100%
+  );
+  border: 1px solid rgba(184, 197, 214, 0.08);
+  border-radius: 0.875rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  border-color: rgba(0, 166, 166, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 166, 166, 0.3),
+    transparent 40%,
+    transparent 60%,
+    rgba(0, 166, 166, 0.1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before { opacity: 1; }
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.625rem;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 166, 166, 0.15),
+    rgba(0, 166, 166, 0.05)
+  );
+  border: 1px solid rgba(0, 166, 166, 0.25);
+  color: var(--color-teal-400);
+  margin-bottom: 1.25rem;
+}
+
+.compliance-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 0.875rem;
+  background: rgba(14, 35, 72, 0.4);
+  border: 1px solid rgba(184, 197, 214, 0.1);
+  border-radius: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--color-slate-text);
+  transition: all 0.2s ease;
+}
+
+.compliance-badge:hover {
+  border-color: rgba(0, 166, 166, 0.4);
+  color: var(--color-teal-300);
+  background: rgba(0, 166, 166, 0.05);
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(184, 197, 214, 0.15) 30%,
+    rgba(184, 197, 214, 0.15) 70%,
+    transparent
+  );
+}
+
+/* Utility for scroll-triggered fade-up animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced-motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

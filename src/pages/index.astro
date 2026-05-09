@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import Industries from "../components/Industries.astro";
+import Compliance from "../components/Compliance.astro";
+import Approach from "../components/Approach.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Lewis Cloud Innovations — AWS Cloud & Cybersecurity Services"
+  description="AWS-first, zero-trust, compliance-aware cloud and cybersecurity services for fintech, healthcare, government, and high-growth enterprises. Primary region: af-south-1 (Cape Town)."
+>
+  <Header />
+  <main id="main">
+    <Hero />
+    <Services />
+    <Industries />
+    <Compliance />
+    <Approach />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

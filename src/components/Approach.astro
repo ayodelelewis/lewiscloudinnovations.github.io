@@ -1,0 +1,54 @@
+---
+const principles = [
+  {
+    label: "01",
+    title: "AWS-First",
+    description:
+      "Our practice is anchored on AWS — native services, Well-Architected principles, and production-hardened patterns. Primary delivery in af-south-1 (Cape Town) with multi-region disaster recovery as a default consideration.",
+  },
+  {
+    label: "02",
+    title: "Zero-Trust by Default",
+    description:
+      "Every architecture we ship assumes implicit-trust networks are dead. NIST SP 800-207 alignment, identity-centric perimeters, and continuous verification — applied from the first design session.",
+  },
+  {
+    label: "03",
+    title: "Compliance-Aware",
+    description:
+      "Compliance isn't a checkbox at the end. We map controls to your applicable frameworks (HIPAA, PCI-DSS, SOC 2, ISO 27001, NIST 800-53, FedRAMP, POPIA, NDPR, GDPR) from day one — and produce the evidence to prove it.",
+  },
+];
+---
+
+<section id="approach" class="relative py-24 md:py-32 scroll-mt-20">
+  <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+  <div class="container-wide">
+    <div class="reveal max-w-2xl mb-16">
+      <span class="eyebrow mb-5 block">Our Approach</span>
+      <h2 class="heading-2 mb-5">Three operating principles. Non-negotiable.</h2>
+      <p class="body-large">
+        These principles shape every architecture decision, every engagement,
+        every deliverable we ship.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {
+        principles.map((p, i) => (
+          <div class="reveal relative" style={`animation-delay: ${i * 0.08}s;`}>
+            <div class="flex items-baseline gap-3 mb-4">
+              <span class="font-mono text-3xl font-bold bg-gradient-to-br from-teal-400 to-teal-600 bg-clip-text text-transparent">
+                {p.label}
+              </span>
+              <div class="flex-1 h-px bg-white/10" />
+            </div>
+            <h3 class="heading-3 mb-3 text-xl">{p.title}</h3>
+            <p class="body-text text-sm">{p.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
