@@ -3,19 +3,15 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
 export default defineConfig({
+  output: 'static',
   site: 'https://lewiscloudinnovations.com',
   trailingSlash: 'never',
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
     assets: '_astro',
   },
   compressHTML: true,
-  prefetch: {
-    prefetchAll: true,
-    defaultStrategy: 'viewport',
-  },
   integrations: [
     sitemap({
       changefreq: 'monthly',
