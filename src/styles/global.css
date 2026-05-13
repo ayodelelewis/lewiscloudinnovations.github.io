@@ -390,3 +390,10 @@ main { position: relative; z-index: 1; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Force all content visible — disable scroll-reveal */
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
