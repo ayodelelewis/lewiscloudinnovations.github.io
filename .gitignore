@@ -34,3 +34,4 @@ Thumbs.db
 # Lock files (keep pnpm only)
 package-lock.json
 yarn.lock
+pnpm-workspace.yaml
